@@ -1,10 +1,10 @@
 Cours ZF
 ========
 
-Ce dépôt sert de base au cours Zend Framework
+Ce dÃ©pÃ´t sert de base au cours Zend Framework
 
-pré-req
+prÃ©-req
 -------
 
 *PHP 3.5 ou sup
-* Zend Framework 1.11 ou supérieur
+* Zend Framework 1.11 ou supÃ¨rieur
