@@ -20,7 +20,7 @@ set_error_handler(function($erno, $errstr)
 );
 
 set_exception_handler(
-//function qui prend lesception en parametre
+//function qui prend lexception en parametre
 	function ($exeption)
 	{
 		echo 'Exception générale : ' . $exeption->getmessage();

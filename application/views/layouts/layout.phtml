@@ -1,0 +1,38 @@
+<?php echo $this->doctype().PHP_EOL ?>
+<html lang="fr">
+    <head>
+    	<!-- Meta -->
+        <?php echo $this->headTitle()->setSeparator(' - ');
+        echo $this->headTitle('Mon Site');
+        echo $this->Romain;
+        $this->headMeta()->appendHttpEquiv('Content-Type', 'text/html; charset=UTF-8');
+        ?>
+        
+        
+        <?php $this->headLink()->appendStylesheet('/css/reset.css', 'all')?>
+        <?php $this->headLink()->appendStylesheet('/css/font.css', 'all')?>
+        <?php $this->headLink()->appendStylesheet('/css/style.css', 'all')?>
+        <?php echo $this->headLink() . PHP_EOL?>
+        
+        <?php $this->headScript()->appendFile('/js/less-grid-4.js', 'text/javascript') ?>
+        <?php echo $this->headScript() . PHP_EOL?>
+        
+        <?php ?>
+        <?php echo $this->headScript() . PHP_EOL?>
+        
+        <link rel="stylesheet" href="style.css" type="text/css" media="all"/>
+    </head>
+    
+    <body>
+    	<?php echo $this->layout()->content; ?>
+    </body>
+    
+    <footer id="footer_site">
+                    
+        <p id="copyright">© Cante Romain  Tous droits réservés<br /> 
+        <a href="http://www.facebook.com">Cliquer-ici</a></p>
+                    
+       <div class="cl"></div>
+     </footer>
+     </div>
+</html>

@@ -1,0 +1,15 @@
+<?php 
+$this->headMeta()->appendName('Keywords', 'bou, bla, bla, blid');
+$this->headMeta()->appendName('Description', 'ceci annonce une description de headMeta');
+$this->headTitle('titre de la page d\'accueil'); 
+$this->headLink()->appendStylesheet('/css/specific.css', 'screen');
+
+?>
+<p>Date du jour <?php echo $this->formatDate('2011-08-11')?></p>
+<h1>Index de Mon Site</h1>
+<ul>
+<li>App1</li>
+<li>App2</li>
+<li>App3</li>
+<li>App4</li>
+</ul>
