@@ -1,4 +1,5 @@
 .buildpath
 .project
-#access.log
-#error.log
+access.log
+error.log
+public/dummy.php
