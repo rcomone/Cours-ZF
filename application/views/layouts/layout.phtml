@@ -1,65 +1,56 @@
-<?php echo $this->doctype(). PHP_EOL ?>
+<?php echo $this->doctype() . PHP_EOL; ?>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-<?php $this->headTitle()->setSeparator(' - ');
-              $this->headTitle('Mon site');
-              echo $this->headTitle() . PHP_EOL;
-              
-
-		     echo $this->navigation()
-		               ->links(Zend_Registry::get('navigation'));
-
-		
-              $this->headLink()->appendStylesheet('/css/reset.css', 'all');
-              $this->headLink()->appendStylesheet('/css/fonts.css', 'all');
-              $this->headLink()->appendStylesheet('/css/style.css', 'all');
-              echo $this->headLink() . PHP_EOL;
-              
-              $this->headScript()->appendFile('/js/less-grid-4.js', 'text/javascript');
-              echo $this->headScript() . PHP_EOL;
-              
-              $this->headMeta()->setHttpEquiv('Content-type', 'text/html; charset=utf-8');
-              echo $this->headMeta() . PHP_EOL;
-             ?>
+	<?php echo $this->headMeta()->appendHttpEquiv('Content-Type', 'text/html; charset=utf-8'); ?>
+	
+	<?php echo $this->navigation()->links(Zend_Registry::get('navigation')).PHP_EOL; ?>
+	
+	<?php $this->headTitle()->setSeparator(' - '); ?>
+	<?php $this->headTitle('My WebSite'); ?>
+	<?php echo $this->headTitle().PHP_EOL; ?>
+	
+	<?php $this->headLink()->appendStylesheet('/css/style.css','all'); ?>
+	<?php $this->headLink()->appendStylesheet('http://fonts.googleapis.com/css?family=Leckerli+One','all'); ?>
+	<?php $this->headLink()->appendStylesheet('http://fonts.googleapis.com/css?family=Yellowtail','all'); ?>
+	<?php $this->headLink()->appendStylesheet('http://fonts.googleapis.com/css?family=Nova+Square','all'); ?>
+	<?php echo $this->headLink();?>
 </head>
 <body id="body">
 <div id="top">
 	<div id="top_content">
 		<div id="logo">
-			<h1>Framework ZEND</h1>
-			<h4>Utilisation de l'objet en php</h4>
+			<h1>Title 1</h1>
+			<h4>Title 4</h4>
 		</div>
 	</div>
 </div>
 <div class="menu">
 	<div class="menu_content">
-		<?php 
-		echo $this->navigation()
-		     	  ->menu(Zend_Registry::get('navigation'))
-		     	  ->setUlClass('menulist');
-		?>
+		<?php echo $this->navigation()->menu(Zend_Registry::get('navigation'));?>
 	</div>
 </div>
-				<div id="breadcrumbs">
-					<a href="/">MyWebSite</a> / 
-					<?php 
-					echo $this->navigation()
-					          ->breadcrumbs(Zend_Registry::get('navigation'))
-					          ->setSeparator(' / ')
-					          ->setMinDepth(0);
-					?>
-				</div>
-
-<div id="content">
-	<?php echo $this->layout()->content?>
+<div class="breadcrumbs">
+	<a class="first" href="/index">My WebSite</a> &rarr;
+	<?php echo $this->navigation()
+	                    ->breadcrumbs(Zend_Registry::get('navigation'))
+	                    ->setSeparator(' &rarr; ')
+	                    ->setMinDepth(0); ?>
 </div>
-
+<div id="video">
+	<div id="video_content">
+			<h2>Title 2</h2>
+			<h3>Title 3</h3>
+	</div>
+</div>
+<div id="content">
+	<?php echo $this->layout()->content;?>
+</div>
 <div id="bottom">
 	<div id="bottom_content">
 		<div class="callcenter">
 			<p class="call_us" style="color:#e44038;padding-left:30px;">Suport 24/7: </p>
-			<p class="call_us"><img src="/img/phone.png" alt="phone" />  (045)0205968600 or (045)0205968611</p>
-			<p class="call_us"><img src="/img/email.png" alt="email" />  contact@contact.com</p>
+			<p class="call_us"><img src="img/phone.png" alt="phone" />  (045)0205968600 or (045)0205968611</p>
+			<p class="call_us"><img src="img/email.png" alt="email" />  contact@contact.com</p>
 
 		</div>
 		<div id="menu_bottom_list">
@@ -73,6 +64,5 @@
 		</div>
 	</div>
 </div>
-<div style="text-align: center; font-size: 0.75em;">Design downloaded from <a href="http://www.freewebtemplates.com/">free website templates</a>.</div></body>
+</body>
 </html>
-

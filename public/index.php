@@ -5,7 +5,7 @@ set_error_handler(
     function($errno, $errstr)
     {
         if( 'development' === APPLICATION_ENV){
-            echo 'Erreur générale :' . $errstr;
+            echo 'JB - Erreur générale :' . $errstr;
         } else {
             echo 'Erreur générale';
         }
@@ -16,7 +16,7 @@ set_exception_handler(
     function($e)
     {
         if( 'development' === APPLICATION_ENV){
-            echo 'Exception générale : ' . $e->getMessage();
+            echo 'JB - Exception générale : ' . $e->getMessage();
         } else {
             echo 'Erreur générale';
         }
